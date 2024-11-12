@@ -70,12 +70,18 @@ class Preprocessor:
                 if ".wav" not in wav_name:
                     continue
 
-                basename = wav_name.split(".")[0]
+                #basename = wav_name.split(".")[0]
+                basename = wav_name[:-4]
                 tg_path = os.path.join(
                     self.out_dir, "TextGrid", speaker, "{}.TextGrid".format(basename)
                 )
-                if os.path.exists(tg_path):
+                
+                if not os.path.exists(tg_path):
+                    print("not found: ", tg_path)
+                    continue
+                else:
                     ret = self.process_utterance(speaker, basename)
+                    #print("---", tg_path, ret)
                     if ret is None:
                         continue
                     else:
@@ -155,6 +161,8 @@ class Preprocessor:
     def process_utterance(self, speaker, basename):
         wav_path = os.path.join(self.in_dir, speaker, "{}.wav".format(basename))
         text_path = os.path.join(self.in_dir, speaker, "{}.lab".format(basename))
+        print(wav_path)
+                
         tg_path = os.path.join(
             self.out_dir, "TextGrid", speaker, "{}.TextGrid".format(basename)
         )

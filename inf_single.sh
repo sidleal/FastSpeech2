@@ -1,0 +1,1 @@
+python synthesize.py --text "Será que eu consigo fazer esse modelo falar em português" --restore_step 900000 --mode single -p config/LJSpeech/preprocess.yaml -m config/LJSpeech/model.yaml -t config/LJSpeech/train.yaml
