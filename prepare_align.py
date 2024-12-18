@@ -2,7 +2,7 @@ import argparse
 
 import yaml
 
-from preprocessor import ljspeech, aishell3, libritts, nurc_min
+from preprocessor import ljspeech, aishell3, libritts, nurc_min, mupev, cmltts
 
 
 def main(config):
@@ -14,6 +14,10 @@ def main(config):
         libritts.prepare_align(config)
     if "nurc_min" in config["dataset"]:
         nurc_min.prepare_align(config)
+    if "mupev" in config["dataset"]:
+        mupev.prepare_align(config)
+    if "cmltts" in config["dataset"]:
+        cmltts.prepare_align(config)
 
 
 if __name__ == "__main__":

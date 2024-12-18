@@ -1,0 +1,1 @@
+python synthesize.py --text "Será que eu consigo fazer esse modelo falar em português" --restore_step 125000 --mode single -p config/nurc_min/preprocess.yaml -m config/nurc_min/model.yaml -t config/nurc_min/train.yaml
