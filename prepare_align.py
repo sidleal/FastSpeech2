@@ -2,7 +2,7 @@ import argparse
 
 import yaml
 
-from preprocessor import ljspeech, aishell3, libritts, nurc_min, mupev, cmltts
+from preprocessor import ljspeech, aishell3, libritts, nurc_min, mupev, cmltts, entoa_tts_pros, mupev2
 
 
 def main(config):
@@ -18,6 +18,10 @@ def main(config):
         mupev.prepare_align(config)
     if "cmltts" in config["dataset"]:
         cmltts.prepare_align(config)
+    if "entoa_tts_pros" in config["dataset"]:
+        entoa_tts_pros.prepare_align(config)
+    if "mupev2" in config["dataset"]:
+        mupev2.prepare_align(config)
 
 
 if __name__ == "__main__":

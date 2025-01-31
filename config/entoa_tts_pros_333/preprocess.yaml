@@ -1,11 +1,10 @@
-dataset: "cmltts"
+dataset: "entoa_tts_pros_333"
 
 path:
-  corpus_path: "/home/sidleal/sources/data/cml-tts"
-  #lexicon_path: "lexicon/cmltts-lexicon.txt"
-  lexicon_path: "lexicon/entoa_tts_pros_lexicon.txt"
-  raw_path: "./raw_data/cmltts"
-  preprocessed_path: "./preprocessed_data/cmltts"
+  corpus_path: "/home/sidleal/sources/data/entoa_tts_pros_333/prosodic"
+  lexicon_path: "lexicon/entoa_tts_pros_333.txt"
+  raw_path: "./raw_data/entoa_tts_pros_333"
+  preprocessed_path: "./preprocessed_data/entoa_tts_pros_333"
 
 preprocessing:
   val_size: 512

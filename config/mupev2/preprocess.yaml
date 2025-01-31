@@ -1,11 +1,10 @@
-dataset: "cmltts"
+dataset: "mupev2"
 
 path:
-  corpus_path: "/home/sidleal/sources/data/cml-tts"
-  #lexicon_path: "lexicon/cmltts-lexicon.txt"
-  lexicon_path: "lexicon/entoa_tts_pros_lexicon.txt"
-  raw_path: "./raw_data/cmltts"
-  preprocessed_path: "./preprocessed_data/cmltts"
+  corpus_path: "/home/sidleal/sources/data/mupev2"
+  lexicon_path: "lexicon/mupev2.txt"
+  raw_path: "./raw_data/mupev2"
+  preprocessed_path: "./preprocessed_data/mupev2"
 
 preprocessing:
   val_size: 512
