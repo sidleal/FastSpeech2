@@ -2,27 +2,30 @@ import argparse
 
 import yaml
 
-from preprocessor import ljspeech, aishell3, libritts, nurc_min, mupev, cmltts, entoa_tts_pros, mupev2
+from preprocessor import ljspeech, aishell3, libritts, nurc_min, mupev, cmltts, entoa_tts_pros, mupev2, cmltts_333, cmltts_entoa_pros
 
 
 def main(config):
     if "LJSpeech" in config["dataset"]:
         ljspeech.prepare_align(config)
-    if "AISHELL3" in config["dataset"]:
+    elif "AISHELL3" in config["dataset"]:
         aishell3.prepare_align(config)
-    if "LibriTTS" in config["dataset"]:
+    elif "LibriTTS" in config["dataset"]:
         libritts.prepare_align(config)
-    if "nurc_min" in config["dataset"]:
+    elif "nurc_min" in config["dataset"]:
         nurc_min.prepare_align(config)
-    if "mupev" in config["dataset"]:
+    elif "mupev" in config["dataset"]:
         mupev.prepare_align(config)
-    if "cmltts" in config["dataset"]:
+    elif "cmltts_333" in config["dataset"]:
+        cmltts_333.prepare_align(config)
+    elif "cmltts_entoa_pros" in config["dataset"]:
+        cmltts_entoa_pros.prepare_align(config)
+    elif "cmltts" in config["dataset"]:
         cmltts.prepare_align(config)
-    if "entoa_tts_pros" in config["dataset"]:
+    elif "entoa_tts_pros" in config["dataset"]:
         entoa_tts_pros.prepare_align(config)
-    if "mupev2" in config["dataset"]:
+    elif "mupev2" in config["dataset"]:
         mupev2.prepare_align(config)
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
