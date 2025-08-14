@@ -4,8 +4,9 @@ librosa == 0.7.2
 matplotlib == 3.2.2
 numba == 0.48
 numpy == 1.19.0
+Cython==0.29.37
 pypinyin==0.39.0
-#pyworld == 0.2.10
+pyworld == 0.2.10
 PyYAML==5.4.1
 scikit-learn==0.23.2
 scipy == 1.5.0
@@ -15,4 +16,4 @@ tgt == 1.4.4
 torch == 1.7.0
 tqdm==4.46.1
 unidecode == 1.1.1
-pyworld
+#pyworld
