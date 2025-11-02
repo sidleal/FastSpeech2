@@ -2,7 +2,7 @@ import argparse
 
 import yaml
 
-from preprocessor import ljspeech, aishell3, libritts, nurc_min, mupev, cmltts, entoa_tts_pros, mupev2, cmltts_333, cmltts_entoa_pros, cmltts_entoa_auto
+from preprocessor import ljspeech, aishell3, libritts, nurc_min, mupev, cmltts, entoa_tts_pros, mupev2, cmltts_333, cmltts_entoa_pros, cmltts_entoa_auto, cmltts_entoa_prossegue
 
 
 def main(config):
@@ -18,6 +18,8 @@ def main(config):
         mupev.prepare_align(config)
     elif "cmltts_333" in config["dataset"]:
         cmltts_333.prepare_align(config)
+    elif "cmltts_entoa_prossegue" in config["dataset"]:
+        cmltts_entoa_prossegue.prepare_align(config)
     elif "cmltts_entoa_pros" in config["dataset"]:
         cmltts_entoa_pros.prepare_align(config)
     elif "cmltts_entoa_auto" in config["dataset"]:
