@@ -2,7 +2,7 @@ dataset: "cmltts_entoa_prossegue"
 
 path:
   corpus_path: "/home/sidleal/sources/data/cm_prossegue"
-  lexicon_path: "lexicon/entoa_tts_pros_333.txt"
+  lexicon_path: "lexicon/entoa_tts_pros_lexicon.txt"
   raw_path: "./raw_data/cmltts_entoa_prossegue"
   preprocessed_path: "./preprocessed_data/cmltts_entoa_prossegue"
 
